@@ -1,0 +1,31 @@
+public class RegularBox extends Box {
+  private String items;
+  private double weight;
+
+  public RegularBox(){
+    super();
+    weight = 0;
+  }
+
+  public RegularBox(String dA, String rA, double w, double l, double h, int count, String i, double w){
+    super(dA, rA, w, l, h, count);
+    items = i;
+    weight = w;
+  }
+  
+  public String getItems(){
+    return items;
+  }
+  
+  public double getWeight(){
+    return weight;
+  }
+  
+  @Override
+  public String toString(){
+    return getId() + "\n" + getDeliveryAddress() + "\n" + getReturn Address 
+    + "\n" + getWidth() + "x" + getLength() + "x" + getHeight() 
+    + "\nItems: " + getItems() + "\nCount: " + getCount() + "\nWeight: " + getWeight();
+  }
+  
+}
