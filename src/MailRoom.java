@@ -51,10 +51,11 @@ public class MailRoom {
         return false;
     }
 
-    public static boolean isValidLiveBox(String dA, String rA, double l, double, w, double h, String animal){
-        if (animal.equals("CHICKEN")){
-            
+    public static boolean isValidLiveBox(LiveBox liveBox){
+        if ((liveBox.getAge() > 1 || liveBox.getAge() < 0{
+            return false;
         }
+        else if (liveBox.getCount)
         return (!dA.isEmpty()) && (!rA.isEmpty()) &&
                 (l >= 6 && l <= 27) &&
                 (w >= .25 && w <= 17) &&
