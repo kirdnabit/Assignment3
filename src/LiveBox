@@ -1,9 +1,9 @@
 public class LiveBox extends Box {
   private String animal;
-  private int age:
+  private int age;
   
   public LiveBox(){
-    animals = "";
+    animal = "";
     age = 0;
   }
   
@@ -14,7 +14,7 @@ public class LiveBox extends Box {
   }
   
   public String getAnimal(){
-    retrun animal;
+    return animal;
   }
   
   public int getAge(){
@@ -23,8 +23,8 @@ public class LiveBox extends Box {
   
   @Override
   public String toString(){
-    return getId() + "\n" + getDeliveryAddress + "\n" + getReturnAddress
-    + "\n" + getWidth() + "x" + getLength + "x" + getHeight + "\nAnimal: " + getAnimal()
+    return getId() + "\n" + getdeliveryAddress() + "\n" + getReturnAddress()
+    + "\n" + getWidth() + "x" + getLength() + "x" + getHeight() + "\nAnimal: " + getAnimal()
     + "\nCount: " + getCount() + "\nAge (Days): " + getAge();
   }
 
