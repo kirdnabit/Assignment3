@@ -11,16 +11,7 @@ public class MailRoom {
                 (t >= 0.007 && t <= 0.25) &&
                 ((l - w) >= 1.5);
     }
-
-
-    public static boolean isValidFlat(String dA, String rA, double l, double w, double t, String flat){
-        return (!dA.isEmpty()) && (!rA.isEmpty()) &&
-                (l >= 11.5 && l <= 15) &&
-                (w >= 6.125 && w <= 12) &&
-                (t >= .25 && t <= .75) && (flat.equals("DOCUMENTS"));
-
-    }
-
+    
     public static boolean handleLetter(Letter letter, ArrayList<Mail> letters) {
         if (isValidLetter(letter.getdeliveryAddress(),letter.getReturnAddress(),letter.getLength(), letter.getWidth(), letter.getThickness())){
             letters.add(letter);
@@ -29,6 +20,14 @@ public class MailRoom {
         return false;
     }
 
+    public static boolean isValidFlat(String dA, String rA, double l, double w, double t, String flat){
+        return (!dA.isEmpty()) && (!rA.isEmpty()) &&
+                (l >= 11.5 && l <= 15) &&
+                (w >= 6.125 && w <= 12) &&
+                (t >= .25 && t <= .75) && (flat.equals("DOCUMENTS"));
+
+    }
+    
     public static boolean handleFlat(Flat flat, ArrayList<Mail> flats){
         if (isValidFlat(flat.getdeliveryAddress(), flat.getReturnAddress(), flat.getLength(), flat.getWidth(), flat.getThickness(), flat.getContents())){
             flats.add(flat);
@@ -37,6 +36,30 @@ public class MailRoom {
         return false;
     }
 
+    public static boolean isValidRegBox(String dA, String rA, double l, double w, double h, double wt, double c){
+        return  (!dA.isEmpty()) && (!rA.isEmpty()) &&
+                (l >= 6 && l <= 27) &&
+                (w >= .25 && w <= 17) &&
+                (h >= 3 && h <= 17) && (wt >= 0 && wt <= 70) && (c >= 0 && c <= 50);
+    }
+
+    public static boolean handleRegularBox(RegularBox regBox, ArrayList<Mail> regBoxes){
+        if (isValidRegBox(regBox.getDeliveryAddress(), regBox.getReturnAddress(), regBox.getLength(), regBox.getWidth(), regBox.getHeight(), regBox.getWeight(), regBox.getCount())){
+            regBoxes.add(regBox);
+            return True;
+        }
+        return false;
+    }
+
+    public static boolean isValidLiveBox(String dA, String rA, double l, double, w, double h, String animal){
+        if (animal.equals("CHICKEN")){
+            
+        }
+        return (!dA.isEmpty()) && (!rA.isEmpty()) &&
+                (l >= 6 && l <= 27) &&
+                (w >= .25 && w <= 17) &&
+                (h >= 3 && h <= 17) && ( || animal.equals("HONEYBEES");
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
