@@ -12,6 +12,8 @@ public class MailRoom {
                 ((l - w) >= 1.5);
     }
 
+
+
     public static boolean isValidFlat(String dA, String rA, double l, double w, double t, String flat){
         return (!dA.isEmpty()) && (!rA.isEmpty()) &&
                 (l >= 11.5 && l <= 15) &&
