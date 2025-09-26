@@ -52,10 +52,18 @@ public class MailRoom {
     }
 
     public static boolean isValidLiveBox(LiveBox liveBox){
-        if ((liveBox.getAge() > 1 || liveBox.getAge() < 0{
-            return false;
+        if (liveBox.getAnimal().equals("HONEYBEES"){
+            if(liveBox.getCount() < 0 || liveBox.getCount() > 20){
+                    return false;
+                {
         }
-        else if (liveBox.getCount)
+        else if (liveBox.getAnimal().equals("CHICKEN")){
+            if (animal.getContent() < 0 || animal.getCount()>10){
+                return false;
+            }
+            if (animal.getAge() < 0 || animal.getAge()>1){
+                return false;
+            }
         return (!dA.isEmpty()) && (!rA.isEmpty()) &&
                 (l >= 6 && l <= 27) &&
                 (w >= .25 && w <= 17) &&
