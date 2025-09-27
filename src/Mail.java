@@ -24,7 +24,7 @@ public class Mail {
     nextId++;
   }
   
-  public String getdeliveryAddress(){
+  public String getDeliveryAddress(){
     return deliveryAddress;
   }
   

@@ -24,8 +24,8 @@ public class Box extends Mail {
   
   @Override
   public String toString(){
-    return getId() + "\n" + getdeliveryAddress() + "\n" + getReturnAddress() + "\n"
-    + getWidth() + "x" + getWidth() + "x" + getHeight();
+    return getId() + "\n" + getDeliveryAddress() + "\n" + getReturnAddress() + "\n"
+    + getWidth() + "x" + getLength() + "x" + getHeight();
   }
 
 }

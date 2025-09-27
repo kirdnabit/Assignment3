@@ -5,12 +5,13 @@ public class RegularBox extends Box {
   public RegularBox(){
     super();
     weight = 0;
+    items = "";
   }
 
-  public RegularBox(String dA, String rA, double w, double l, double h, int count, String i, double weight){
+  public RegularBox(String dA, String rA, double w, double l, double h, int count, String i, double wt){
     super(dA, rA, w, l, h, count);
     items = i;
-    this.weight = weight;
+    weight = wt;
   }
   
   public String getItems(){
@@ -23,7 +24,7 @@ public class RegularBox extends Box {
   
   @Override
   public String toString(){
-    return getId() + "\n" + getdeliveryAddress() + "\n" + getReturnAddress()
+    return getId() + "\n" + getDeliveryAddress() + "\n" + getReturnAddress()
     + "\n" + getWidth() + "x" + getLength() + "x" + getHeight() 
     + "\nItems: " + getItems() + "\nCount: " + getCount() + "\nWeight: " + getWeight();
   }
